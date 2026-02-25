@@ -1,0 +1,108 @@
+package com.work.main;
+
+import java.util.Objects;
+
+public class User {
+
+    private int userId;
+    private int userCode;
+    private String userUsername;
+    private String userPassword;
+    private String userHeadPortrait;
+    private String userStatus;
+    private String userIdentity;
+
+    public User(){}
+
+    public User(int userId, int userCode, String userUsername, String userPassword, String userPeadPortrait, String userStatus, String userIdentity) {
+        this.userId = userId;
+        this.userCode = userCode;
+        this.userUsername = userUsername;
+        this.userPassword = userPassword;
+        this.userHeadPortrait = userHeadPortrait;
+        this.userStatus = userStatus;
+        this.userIdentity = userIdentity;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getUserCode() {
+        return userCode;
+    }
+
+    public void setUserCode(int userCode) {
+        this.userCode = userCode;
+    }
+
+    public String getUserUsername() {
+        return userUsername;
+    }
+
+    public void setUserUsername(String userUsername) {
+        this.userUsername = userUsername;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserHeadPortrait() {
+        return userHeadPortrait;
+    }
+
+    public void setUserHeadPortrait(String userHeadPortrait) {
+        this.userHeadPortrait = userHeadPortrait;
+    }
+
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
+    }
+
+    public String getUserIdentity() {
+        return userIdentity;
+    }
+
+    public void setUserIdentity(String userIdentity) {
+        this.userIdentity = userIdentity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return userId == user.userId && userCode == user.userCode && Objects.equals(userUsername, user.userUsername) && Objects.equals(userPassword, user.userPassword) && Objects.equals(userHeadPortrait, user.userHeadPortrait) && Objects.equals(userStatus, user.userStatus) && Objects.equals(userIdentity, user.userIdentity);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, userCode, userUsername, userPassword, userHeadPortrait, userStatus, userIdentity);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userCode=" + userCode +
+                ", userUsername='" + userUsername + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userHeadPortrait='" + userHeadPortrait + '\'' +
+                ", userStatus='" + userStatus + '\'' +
+                ", userIdentity='" + userIdentity + '\'' +
+                '}';
+    }
+}
